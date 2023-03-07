@@ -7,7 +7,7 @@ export const Container = styled.table`
   border-collapse: collapse;
 `;
 
-export const TabletHead = styled.thead`
+export const TableHead = styled.thead`
   & th {
     padding: 10px;
     border: 1px solid;
@@ -15,7 +15,7 @@ export const TabletHead = styled.thead`
   }
 `;
 
-export const TabletBody = styled.tbody`
+export const TableBody = styled.tbody`
   & td {
     padding: 10px;
     border: 1px solid;

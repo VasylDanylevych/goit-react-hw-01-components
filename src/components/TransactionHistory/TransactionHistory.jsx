@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import { Transaction } from "components/Transaction/Transaction";
-import { Container, TabletHead, TabletBody } from './TransactionsHistory.styled';
+import { Container, TableHead, TableBody } from './TransactionsHistory.styled';
 
 
 
 export const TransactionHistory = ({transactions}) => {
     return(
         <Container>
-            <TabletHead>
+            <TableHead>
                 <tr>
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Currency</th>
                 </tr>
-            </TabletHead>
-            <TabletBody>
+            </TableHead>
+            <TableBody>
                 <Transaction transactions={transactions}/>
-            </TabletBody>
+            </TableBody>
         </Container>
     )
 };
