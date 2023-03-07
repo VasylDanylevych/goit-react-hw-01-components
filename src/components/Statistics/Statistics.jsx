@@ -6,8 +6,8 @@ import { Container, Item, List } from './Statistics.styled';
 export const Statistics = ({title, stats}) => {
     return (
         <Container>
-            <h2 className="title">{title}</h2>
-            <List className="stat-list">
+            {title && <h2>{title}</h2>}
+            <List>
                 {stats.map (({ id, label, percentage }) => {
                     return (
                         <Item key={id}>
