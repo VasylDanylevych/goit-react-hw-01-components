@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { Friends } from "components/Friend/Friend"
-import { Container, Item, Marker } from './FriendList.styled';
+import { Container } from './FriendList.styled';
 
 
 
 export const FriendsList = ({friends}) => {
     return(
         <Container>
-            <Friends friends={friends} item={Item} marker={Marker}/>
+            <Friends friends={friends}/>
         </Container>
     )
 };
