@@ -1,31 +1,44 @@
-export const Profile = () => {
-    return (
-        <div className="profile">
-            <div className="description">
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-                    alt="User avatar"
-                    class="avatar"
-                />
-                <p className="name">Petra Marica</p>
-                <p className="tag">@pmarica</p>
-                <p className="location">Salvador, Brasil</p>
-            </div>
+import PropTypes from 'prop-types';
+import { Container, Description, Stats, Avatar } from './Profile.styled';
 
-            <ul className="stats">
+
+export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
+    return (
+        <Container >
+            <Description>
+                <Avatar
+                    src={avatar}
+                    alt="User avatar"
+                />
+                <p>{username}</p>
+                <p>@{tag}</p>
+                <p>{location}</p>
+            </Description>
+
+            <Stats>
                 <li>
-                    <span className="label">Followers</span>
-                    <span className="quantity">1000</span>
+                    <span>Followers</span>
+                    <span>{followers}</span>
                 </li>
                 <li>
-                    <span className="label">Views</span>
-                    <span className="quantity">2000</span>
+                    <span>Views</span>
+                    <span>{views}</span>
                 </li>
                 <li>
-                    <span className="label">Likes</span>
-                    <span className="quantity">3000</span>
+                    <span>Likes</span>
+                    <span>{likes}</span>
                 </li>
-         </ul>
-        </div>
+            </Stats>
+        </Container>
     )
-}
+};
+
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+};
