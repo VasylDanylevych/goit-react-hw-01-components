@@ -8,6 +8,7 @@ export const Container = styled.section`
 `;
 
 export const List = styled.ul`
+  margin: 0;
   width: 400px;
   padding-left: 0;
   display: flex;
